@@ -1,0 +1,52 @@
+extends ../layout
+
+block content
+  .container
+    .row
+      form.form-horizontal(method="post", action="/admin/animate/new")
+        input(type="hidden", name="animate[_id]", value="#{animate._id}")
+        .form-group
+          label.col-sm-2.control-lable(for="inputTitleCN") 动漫中文名
+          .col-sm-10
+            input#inputTitleCN.form-control(type="text", name="animate[title_CN]", value="#{animate.title_CN}")
+        .form-group
+          label.col-sm-2.control-lable(for="inputTitleOG") 动漫原名
+          .col-sm-10
+            input#inputTitleOG.form-control(type="text", name="animate[title_OG]", value="#{animate.title_OG}")
+        .form-group
+          label.col-sm-2.control-lable(for="inputDirector") 导演
+          .col-sm-10
+            input#inputDirector.form-control(type="text", name="animate[director]", value="#{animate.director}")
+        .form-group
+          label.col-sm-2.control-lable(for="inputCountry") 国家
+          .col-sm-10
+            input#inputCountry.form-control(type="text", name="animate[country]", value="#{animate.country}")
+        .form-group
+          label.col-sm-2.control-lable(for="inputYear") 年份
+          .col-sm-10
+            input#inputYear.form-control(type="text", name="animate[year]", value="#{animate.year}")
+        .form-group
+          label.col-sm-2.control-lable(for="inputType") 类型
+          .col-sm-10
+            input#inputType.form-control(type="text", name="animate[type]", value="#{animate.type}")
+        .form-group
+          label.col-sm-2.control-lable(for="inputParts") 集数
+          .col-sm-10
+            input#inputParts.form-control(type="text", name="animate[parts]]", value="#{animate.parts}")
+        .form-group
+          label.col-sm-2.control-lable(for="inputPoster") 海报地址
+          .col-sm-10
+            input#inputPoster.form-control(type="text", name="animate[poster]", value="#{animate.poster}")
+        .form-group
+          label.col-sm-2.control-lable(for="inputFlash") 地址
+          .col-sm-10
+            input#inputFlash.form-control(type="text", name="animate[flash]", value="#{animate.flash}")
+        .form-group
+          label.col-sm-2.control-lable(for="inputSummary") 简介
+          .col-sm-10
+            input#inputSummary.form-control(type="text", name="animate[summary]", value="#{animate.summary}")
+        .form-group
+          .col-sm-11
+          button.btn.btn-default(type="submit") 录入
+
+

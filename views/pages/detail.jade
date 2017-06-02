@@ -1,0 +1,27 @@
+extends ../layout
+
+block content
+  .container
+    .row
+      .col-md-7
+        embed(src="#{animate.flash}", allowFullScreen="true", quality="high", width="720", height="600", align="middle", type="application/x-shockwave-flash")
+      .col-md-5
+        dl.dl-horizontal
+          dt 中文名
+          dd= animate.title_CN
+          dt 原名
+          dd= animate.title_OG
+          dt 导演
+          dd= animate.director
+          dt 国家
+          dd= animate.country
+          dt 年份
+          dd= animate.year
+          dt 类型
+          dd= animate.type
+          dt 集数
+          dd= animate.parts
+          dt 简介
+          dd= animate.summary
+
+

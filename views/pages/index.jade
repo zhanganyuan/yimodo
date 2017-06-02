@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+  .container
+    .row
+      each item in animates
+        .col-md-2
+          .thumbnail
+            a(href="/animate/#{item._id}")
+              img(src="#{item.poster}", alt="#{item.title}")
+            .caption
+            h3 #{item.title}
+            p: a.btn.btn-primary(href="/animate/#{item._id}", role="button") play

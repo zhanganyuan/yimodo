@@ -1,0 +1,36 @@
+extends ../layout
+
+block content
+  .container
+    .row
+    table.table.table-hover.table-bordered
+      thead
+        tr
+          th 中文名
+          th 原名
+          th 导演
+          th 国家
+          th 年份
+          th 类型
+          td 录入时间
+          th 查看
+          th 更新
+          th 删除
+      tbody
+        each item in animates
+          tr(class="item-id-#{item._id}")
+            td #{item.title_CN}
+            td #{item.title_OG}
+            td #{item.director}
+            td #{item.country}
+            td #{item.year}
+            td #{item.type}
+            td #{moment(item.meta.createdAt).format('MM/DD/YYYY')}
+            td: a(target="_blank", href="../../animate/#{item._id}") 查看
+            td: a(target="_blank", href="../update/#{item._id}") 修改
+            td
+              button.btn.btn-danger.del(type="button", data-id="#{item._id}") 删除
+  script(src="/js/admin.js")
+
+
+
