@@ -1,7 +1,7 @@
 var express = require('express');
 var path = require('path');
 var mongoose = require('mongoose');
-var Animate = require('./models/Animate')
+var Animate = require('./models/animate')
 var _ = require('underscore');
 var port = process.argv[2] || 3000;
 var app = express();
